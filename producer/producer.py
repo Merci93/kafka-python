@@ -78,7 +78,9 @@ try:
         # This sends data in batches, and if by chance this producer crashes,
         # it ensures the last batch in process is sent before the producer is
         # exited. This is buffering and helps in performance in production and
-        # a best practive.
+        # a best practive. In a production environment, the flush would not be
+        # at this stage, only at the exit point. This here is for learning
+        # purpose so the message can be displayed.
         producer.flush()
         time.sleep(8)
 
@@ -86,5 +88,5 @@ except KeyboardInterrupt:
     print("🛑 Terminating producer ...")
 
 finally:
-    producer.flush()
+    producer.close()
     print("⛔ Producer stopped.")
