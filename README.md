@@ -220,26 +220,3 @@ This project demonstrates:
 * Message serialization using JSON
 * Consumer groups and offsets
 * Basic stream processing patterns
-
----
-
-## Future Enhancements
-
-Potential improvements include:
-
-* Multiple Kafka consumers
-* Partitioned topics
-* Schema Registry integration
-* Avro or Protobuf serialization
-* Kafka Connect
-* Debezium CDC integration
-* Stream processing with Spark Structured Streaming
-* Airflow orchestration
-* Databricks ingestion pipelines
-* Monitoring with Prometheus and Grafana
-
----
-
-## Author
-
-A simple Kafka streaming project demonstrating real-time event processing using Python, Apache Kafka, and Docker.
