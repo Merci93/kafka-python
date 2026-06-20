@@ -22,7 +22,7 @@ def delivery_message(err, msg) -> None:
     if err:
         print(f"❌ Delivery failed: {err}")
     else:
-        print(f"✅ Delivered {msg.value().decode("utf-8")}")
+        print(f'✅ Delivered {msg.value().decode("utf-8")}')
 
 
 products = [
@@ -86,5 +86,5 @@ except KeyboardInterrupt:
     print("🛑 Terminating producer ...")
 
 finally:
-    producer.close()
+    producer.flush()
     print("⛔ Producer stopped.")
